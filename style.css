@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,400&family=Darker+Grotesque:wght@900&family=Montserrat:wght@400;700&display=swap');
+
+
+html,
+body {
+    font-family: "Montserrat";
+    margin: 0;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+    height: 100vh;
+    position: relative;
+}
+
+.bg {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.even .first-sect {
+    background-color: #36BFB1;
+    width: 60%;
+}
+
+
+.odd .first-sect {
+    width: 40%;
+}
+
+.odd .second-sect {
+    width: 60%;
+    background-color: #EFD5F2;
+}
+
+
+.about-me .content {
+    position: absolute;
+    top: 0;
+    left: 30%;
+}
+
+.me-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* align-items: flex-start;   */
+    width: 500px;
+    height: 80%;
+    margin-left: 26px;
+    text-align: left;
+}
+
+.contact .content {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+}
+
+.bg2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.images img,
+.images svg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.images img:hover {
+    transform: scale(0.8)
+}
+
+.images svg:hover {
+    transform: scale(0.8)
+}
+
+.large-title-main {
+    font-size: 4rem;
+}
+
+.large-title {
+    font-size: 2rem;
+    font-weight: bold;
+
+
+}
+
+.tag {
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    background-color: #000;
+    color: #ffff;
+    justify-content: center;
+    align-items: flex-end;
+    border-top-right-radius: 1em;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50px;
+    z-index: 99;
+    padding-left: 20px;
+}
+
+nav svg {
+    margin-top: 15px;
+}
+
+.contact .first-sect {
+    background-color: #ffff;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact .second-sect {
+    background-color: #0052FF;
+    width: 40%;
+}
+
+.contact form {
+    width: 50%;
+    margin: auto;
+    /* margin-top: 100px; */
+    /* background-color: cyan; */
+}
+
+
+
+.contact input,
+textarea {
+    background-color: #F8F9FF;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    height: 35px;
+}
+
+.contact label {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.contact .btn {
+    margin-top: 24px;
+    background-color: #0052FF;
+    color: white;
+}
+
+.other-contacts {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.slideshow-container {
+    /* max-width: 1000px; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto auto;
+    height: 100%;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #fff;
+    font-size: 0.8rem;
+}
+
+.slide-content {
+    display: flex;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.fade img {
+    border-radius: 200px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+
+    font-size: 15px;
+    padding: 8px 12px;
+    /* position: absolute; */
+    bottom: 8px;
+    width: 100%;
+
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+   
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+
+    .me-info {
+        width: 300px;
+        height: 98%;
+    }
+
+    .images {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .images img,
+    .images svg {
+        height: 150px;
+    }
+
+    .contact .first-sect {
+        background-color: #ffff;
+        min-height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact .second-sect {
+        background-color: #0052FF;
+        width: 50%;
+    }
+
+    .text {
+        font-size: 0.7rem;
+    }
+
+}
+
+@media only screen and (max-width: 430px)
+{
+    .odd .first-sect {
+        width: 0%;
+    }
+
+    .odd .second-sect {
+        width: 100%;
+        background-color: #EFD5F2;
+    }
+
+    .about-me .content {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .large-title-main {
+        font-size: 2.5rem;
+    }
+
+    .me-info {
+        width: 300px;
+        height: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding-left: 80px;
+        padding-right: 80px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .images img,
+    .images svg {
+        height: 120px;
+    }
+
+    .large-title .bg2>h2 {
+        margin: 10px 0px;
+    }
+
+    .contact .second-sect{
+        display: none;
+    }
+    .contact .first-sect{
+       width: 100%;
+    }
+
+    .contact svg{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .me-info {
+        width: 250px;
+        height: 98%;
+    }
+}
+@media only screen and (max-width: 380px) {
+  
+    .images {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
