@@ -74,8 +74,9 @@ section {
 .images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+    gap: 0px 10px;
+
+    /* padding: 15px; */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -96,6 +97,14 @@ section {
 .images svg:hover {
     transform: scale(0.8)
 }
+
+.Projects {
+    background-color: #f5f5f5;
+    /* padding: 40px 0; */
+    text-align: center;
+    overflow: hidden;
+}
+
 
 .large-title-main {
     font-size: 4rem;
@@ -283,7 +292,13 @@ textarea {
     }
 }
 
-
+.description {
+    padding: 0px;
+    color: #000;
+    font-size: 12px;
+    line-height: 10px;
+    font-weight:300; 
+}
 
 @media only screen and (max-width: 800px) {
 
